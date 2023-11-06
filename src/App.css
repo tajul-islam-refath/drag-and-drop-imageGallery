@@ -1,0 +1,118 @@
+.main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f4f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageGallery {
+  width: 60vw;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.delete-btn {
+  color: red;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.photo {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.photo:nth-child(1) {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+.selectImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dotted #ccc !important;
+}
+
+.selectImage img {
+  width: 40px;
+  height: 40px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 8px;
+  z-index: 111;
+}
+
+.overlay-hd {
+  display: none;
+}
+
+.overlay-blk {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.photo:hover .overlay:not(.overlay-blk) {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.input {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 1111;
+}
+
+.input-hd {
+  display: none;
+}
+
+.input-blk {
+  display: block;
+}
+
+.photo:hover .input:not(.input-blk) {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
