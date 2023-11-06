@@ -30,6 +30,7 @@ import image9 from "../assets/images/image-9.webp";
 import image10 from "../assets/images/image-10.jpeg";
 import image11 from "../assets/images/image-11.jpeg";
 import icon from "../assets/images/img-icon.png";
+
 const ImageGallery = () => {
   const [images, setImages] = useState([
     {

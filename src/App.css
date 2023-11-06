@@ -1,18 +1,14 @@
 .main {
-  min-width: 100vw;
   min-height: 100vh;
-  background-color: #f4f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .imageGallery {
   width: 60vw;
-  height: auto;
+
+  margin: auto;
+  margin-top: 10px;
   background-color: #fff;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .topBar {
@@ -111,8 +107,21 @@
   display: block;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+@media only screen and (max-width: 900px) {
+  .imageGallery {
+    width: 80vw;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .imageGallery {
+    width: 90vw;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
